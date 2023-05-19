@@ -11,16 +11,16 @@ echo "Offensive Security Tip: $random_quote - Sun Tzu" | lolcat
 sleep 1
 echo "MEANS, IT'S ☕ 1337 ⚡ TIME, 369 ☯ " | lolcat
 sleep 1
-figlet -w 80 -f small NucleiMonst3r | lolcat
+figlet -w 80 -f small fuckBounty | lolcat
 echo ""
-echo "[YOUR ARE USING NucleiMonst3r.sh] - (v1.0) CODED BY Chris 'SaintDruG' Abou-Chabké WITH ❤ FOR blackhatethicalhacking.com for Educational Purposes only!" | lolcat
+echo "Neverl0g" | lolcat
 sleep 1
 #check if the user is connected to the internet
 tput bold;echo "CHECKING IF YOU ARE CONNECTED TO THE INTERNET!" | lolcat
 # Check connection
 wget -q --spider https://google.com
 if [ $? -ne 0 ];then
-    echo "++++ CONNECT TO THE INTERNET BEFORE RUNNING NucleiMonst3r.sh!" | lolcat
+    echo "++++ CONNECT TO THE INTERNET BEFORE RUNNING fuckBounty.sh!" | lolcat
     exit 1
 fi
 tput bold;echo "++++ CONNECTION FOUND, LET'S GO!" | lolcat
@@ -35,7 +35,7 @@ mkdir "$domain"
 
 # Fetching URLs for website and filtering by specific extensions please wait...
 echo "Fetching URLs for $domain and filtering by specific extensions..."
-waybackurls $domain | tee $domain/filtered_urls.txt | lolcat
+subfinder -d $domain -silent | alterx -enrich | dnsx | waybackurls $domain | tee $domain/filtered_urls.txt | lolcat
 
 # Checking filtered URLs with httpx and saving the output in httpx_output.txt...
 echo "Checking filtered URLs with httpx and saving the output in httpx_output.txt..."
