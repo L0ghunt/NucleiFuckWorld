@@ -55,7 +55,7 @@ echo "8. technologies"
 echo "9. Xss-Cpanel"
 echo "10. All Templates com info"
 echo "11. All Templates exclusion info"
-echo "12. Neverl0g apelão"
+#echo "12. All Templates FuckBounty"
 echo "Enter the numbers separated by commas:"
 read templates
 
@@ -104,9 +104,10 @@ if [[ $templates == *"11"* ]]; then
   t_args="$t_args -t /root/nuclei-templates -es info"
 fi
 
-if [[ $templates == *"12"* ]]; then
-  t_args="$t_args -t /root/nuclei-templates/neverl0g -es info"
-fi
+# if [[ $templates == *"12"* ]]; then
+#   t_args="$t_args -t /root/nuclei-templates/fuckBounty"
+# fi
+
 
 echo "Starting Nuclei scan with the selected templates..."
 cat $domain/httpx_output.txt | nuclei -stats -si 100 $t_args -o $domain/nuclei_results_for_$domain.txt
