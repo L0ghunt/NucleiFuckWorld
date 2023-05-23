@@ -35,7 +35,7 @@ mkdir "$domain"
 
 # Fetching URLs for website and filtering by specific extensions please wait...
 echo "Fetching URLs for $domain and filtering by specific extensions..."
-subfinder -d $domain -silent | alterx -enrich | dnsx | waybackurls $domain | tee $domain/filtered_urls.txt | lolcat
+waybackurls $domain | tee $domain/filtered_urls.txt | lolcat
 
 # Checking filtered URLs with httpx and saving the output in httpx_output.txt...
 echo "Checking filtered URLs with httpx and saving the output in httpx_output.txt..."
