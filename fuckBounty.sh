@@ -92,7 +92,7 @@ if [[ $templates == *"8"* ]]; then
 fi
 
 if [[ $templates == *"9"* ]]; then
-  t_args="$t_args -t /root/nuclei-templates/telegrampro/xss-cpanel.yaml"
+  t_args="$t_args -t /root/nuclei-templates/ -etags ssl -s low, medium, high, critical, unknown"
 fi
 
 
@@ -104,9 +104,6 @@ if [[ $templates == *"11"* ]]; then
   t_args="$t_args -t /root/nuclei-templates -es info"
 fi
 
-if [[ $templates == *"12"* ]]; then
-  t_args="$t_args -t /root/nuclei-templates/fuckBounty -etags ssl -s low, medium, high, critical, unknown"
-fi
 
 
 echo "Starting Nuclei scan with the selected templates..."
