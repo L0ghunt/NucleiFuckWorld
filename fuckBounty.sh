@@ -105,7 +105,7 @@ if [[ $templates == *"11"* ]]; then
 fi
 
 if [[ $templates == *"12"* ]]; then
-  t_args="$t_args -t /root/nuclei-templates/fuckBounty"
+  t_args="$t_args -t /root/nuclei-templates/fuckBounty -etags ssl -s low, medium, high, critical, unknown"
 fi
 
 
